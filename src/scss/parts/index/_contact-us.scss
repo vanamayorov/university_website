@@ -1,0 +1,159 @@
+.contact-us {
+  margin-bottom: 120px;
+
+  @include media-w($sm) {
+    margin-bottom: 60px;
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__left {
+    max-width: 700px;
+    width: 100%;
+    background-color: $green-main;
+    color: #fff;
+  }
+
+  &__right {
+    @include media-w($md) {
+      display: none;
+    }
+  }
+
+  &__img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    color: #fff;
+    margin-bottom: 72px;
+
+    @include media-w($xs) {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__content {
+    height: 100%;
+    padding: 50px;
+
+    @include media-w($xs) {
+      padding: 50px 16px;
+
+    }
+  }
+
+  &__textarea {
+    display: block;
+    resize: none;
+    width: 100%;
+    min-height: 220px;
+    margin-bottom: 50px;
+    border: none;
+    background-color: $green-main;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 42px;
+    font-family: 'PTSans', sans-serif;
+    background-image: url('../img/index/textarea-bg.png');
+    background-size: contain;
+    background-position: 0 40px;
+
+    @include media-w($sm) {
+      background-position: 0 68px;
+    }
+
+    @include media-w($xs) {
+      min-height: 130px;
+      background-image: none;
+    }
+
+    &::placeholder {
+      color: #fff;
+    }
+
+    &:focus-visible {
+      outline: 0;
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 30px;
+    cursor: pointer;
+    padding-bottom: 15px;
+    border-bottom:  1px solid rgba(255, 255, 255, 0.2);
+    transition: border-color 0.3s;
+
+    &:hover {
+      border-color: #fff;
+    }
+
+    div {
+      position: relative;
+      padding-left: 37px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        width: 21px;
+        height: 19px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+    }
+  }
+
+  &__label--tz {
+    div {
+      &::before {
+        background-image: url('../img/sprite.svg#tz');
+      }
+    }
+  }
+
+  &__label--photo {
+    div {
+      &::before {
+        background-image: url('../img/sprite.svg#add');
+      }
+    }
+  }
+
+  &__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  &__btn {
+    color: $green-main;
+    font-weight: 600;
+    background-color: #fff;
+    text-align: center;
+    min-width: 210px;
+    border-radius: 4px;
+    padding: 13px 0;
+    border: 1px solid transparent;
+    transition: border-color 0.3s, color 0.3s;
+
+    @include media-w($xs) {
+      width: 100%;
+    }
+
+    &:hover {
+      color: #fff;
+      background-color: $green-main;
+      border-color: #fff;
+    }
+  }
+}

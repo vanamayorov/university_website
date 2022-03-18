@@ -1,0 +1,109 @@
+.why-us {
+  position: relative;
+  margin-bottom: 40px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    top: 0;
+    width: 30%;
+    height: 450px;
+    background-color: $green-main;
+
+    @include media-w($md) {
+      height: 320px;
+    }
+
+    @include media-w($sm) {
+      height: 190px;
+    }
+
+    @include media-w($xs) {
+      content: none;
+    }
+  }
+
+  &__banner {
+    display: flex;
+    position: relative;
+    margin-bottom: 70px;
+
+    @include media-w($md) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    height: 450px;
+
+    @include media-w($md) {
+      height: 320px;
+    }
+
+    @include media-w($sm) {
+      height: 190px;
+    }
+
+    @include media-w($xs) {
+      height: auto;
+    }
+  }
+
+  &__title {
+    color: #fff;
+    max-width: 360px;
+
+    @include media-w($sm) {
+      font-size: 22px;
+      max-width: 190px;
+      margin-bottom: 0;
+    }
+
+    @include media-w($xs) {
+      max-width: unset;
+      font-size: 28px;
+      color: $black-main;
+    }
+  }
+
+  &__bg {
+    height: 450px;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    background-size: cover;
+
+    @include media-w($md) {
+      height: 320px;
+    }
+
+    @include media-w($sm) {
+      height: 190px;
+    }
+
+    @include media-w($xs) {
+      display: none;
+    }
+  }
+
+  &__desc {
+    margin-bottom: 0;
+  }
+
+  &__item {
+    margin-bottom: 60px;
+
+    @include media-w($md) {
+      margin-bottom: 50px;
+    }
+
+    @include media-w($xs) {
+      margin-bottom: 40px;
+    }
+  }
+}

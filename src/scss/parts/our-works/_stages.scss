@@ -1,0 +1,31 @@
+.stages {
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__num {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+    color: #fff;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background-color: $green-main;
+    text-align: center;
+    font-family: 'Exo2', sans-serif;
+    font-weight: 600;
+    z-index: 1;
+    line-height: 1.6;
+    font-size: 38px;
+
+    @include media-w($md) {
+      left: -15px;
+    }
+  }
+}

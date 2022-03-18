@@ -1,0 +1,68 @@
+.services-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 205px;
+  width: 100%;
+  margin: 0 auto;
+
+  @include media-w($md) {
+    max-width: unset;
+    flex-direction: row;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: $box-shadow;
+  }
+
+  @include media-w($xs) {
+    flex-direction: column;
+    padding: 0;
+    background-color: transparent;
+    border-radius: unset;
+    box-shadow: none;
+  }
+
+  &__icon-wrapper {
+    margin-bottom: 24px;
+    max-width: 92px;
+    height: 92px;
+
+    @include media-w($md) {
+      margin-bottom: 0;
+      margin-right: 28px;
+    }
+
+    @include media-w($xs) {
+      margin-bottom: 15px;
+      margin-right: 0;
+    }
+  }
+
+  &__content {
+    @include media-w($md) {
+      max-width: 60%;
+    }
+
+    @include media-w($xs) {
+      max-width: 100%;
+    }
+  }
+
+  &__svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__title {
+    color: $black-main;
+    font-size: 20px;
+    line-height: 1.3;
+    font-family: "PTSans", sans-serif;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  &__description {
+    color: $grey-main;
+  }
+}

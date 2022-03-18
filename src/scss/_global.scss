@@ -1,0 +1,32 @@
+.title {
+  font-family: "Exo2", sans-serif;
+  color: $black-main;
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 32px;
+
+  @include media-w($md) {
+    font-size: 44px;
+  }
+
+  @include media-w($xs) {
+    font-size: 28px;
+  }
+}
+
+.main {
+  padding-top: 58px;
+
+  @include media-w($md) {
+    padding-top: 44px;
+  }
+}
+
+.description-info {
+  color: $grey-main;
+  margin-bottom: 40px;
+}
+
+.global-wrapper {
+  padding-bottom: 115px;
+}
