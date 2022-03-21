@@ -8,7 +8,7 @@ Compiled project available in build directory.
 <ol>
     <li>
          Install packages:
-         <pre>node i</pre>   
+         <pre>npm i</pre>   
     </li>
     <li>
          Run:
